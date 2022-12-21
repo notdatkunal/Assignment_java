@@ -1,0 +1,12 @@
+- prime number
+- perfect
+- fibonacci 
+- armstrong --
+- hershad 
+- automorphic 
+- spy
+- lucky
+- neon 
+- sum of the numbers of 
+- length of number
+- factorial
