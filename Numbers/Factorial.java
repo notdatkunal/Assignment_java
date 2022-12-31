@@ -1,16 +1,25 @@
-import java.util.Scanner;
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
 
-public class Factorial {
-
+class HelloWorld {
     public static void main(String[] args) {
-      int number,i,factorial;  
-	Scanner in = new Scanner(System.in);
-        System.out.println("enter a number you want to find factorial of");
-        number = in.nextInt();
-	  
-        
-		while (i <= number) {
-	 	i = i*
+        String s = " Hello, Kunal ";
+        int l = s.length()-1;
+        int j=0;
+        int len = 0;
+        int i=0;
+        while (i<=l){
+            if(s.charAt(i)==' ')
+            {
+                j = len;
+                len = 0;
+            }
+            else{
+                len++;
+            }
+            i++;
         }
+        System.out.println(len==0?j:len);
+
     }
 }

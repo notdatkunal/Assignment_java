@@ -1,0 +1,196 @@
+import java.util.Scanner;
+
+public class Hi {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        isPrime(3);
+        isPerfect(4);
+        isNeon(9);
+        isStrong(145);
+        isArmstrong(9474);
+        Xylem(825122);
+        isHarshad(18);
+        Reverse(123);
+        Pallindrome(121);
+        Fibonacci(15);
+    }
+
+    public static void Fibonacci(int l) {
+        int num1, num2, num3;
+        num1 = 0;
+        num2 = 1;
+
+        int c = 1;
+        System.out.print(num1 + " ");
+        System.out.print(num2 + " ");
+        while (c <= l) {
+            num3 = num2 + num1;
+            System.out.print(num3 + " ");
+            num1 = num2;
+            num2 = num3;
+            c++;
+        }
+    }
+
+    public static void Pallindrome(int n) {
+        int r = 0;
+        int num = n;
+        while (n != 0) {
+            r *= 10;
+            r += n % 10;
+            n /= 10;
+        }
+        if (num == r) {
+            System.out.println("pallindrome");
+            return;
+        }
+        System.out.println("not pallindrome");
+    }
+
+    public static void Reverse(int n) {
+        int r = 0;
+
+        while (n != 0) {
+            r *= 10;
+            r += n % 10;
+            n /= 10;
+        }
+        System.out.println(r);
+    }
+
+    public static void isHarshad(int n) {
+        int sum = 0;
+        int num = n;
+        while (n != 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        if (num % sum == 0) {
+            System.out.println("harshad");
+            return;
+        }
+        System.out.println("not harshad");
+    }
+
+    public static void Xylem(int a) {
+
+        int sum1 = a % 10;
+        a /= 10;
+        int sum2 = 0;
+        while (a > 9) {
+
+            sum2 += a % 10;
+            a /= 10;
+            // System.out.println(a);
+        }
+        sum1 += a;
+        if (sum1 == sum2) {
+            System.out.println("xylem");
+        } else {
+            System.out.println("phloem");
+        }
+
+    }
+
+    public static void isArmstrong(int i) {
+        String j = "" + i;
+        int l = j.length();
+        int num = i;
+        int digit = 1;
+        int sum = 0;
+        while (num != 0) {
+            digit = num % 10;
+            int c = 1;
+            int temp = digit;
+            while (c != l) {
+                temp *= digit;
+                c++;
+            }
+            sum += temp;
+            num /= 10;
+        }
+        if (sum == i) {
+            System.out.println("armstrong");
+        } else {
+            System.out.println("not armstrong");
+
+        }
+    }
+
+    public static void isStrong(int num) {
+        int i, factorial, digit, sum, temp;
+        temp = num;
+        sum = 0;
+        while (temp > 0) {
+            i = 1;
+            factorial = 1;
+
+            digit = temp % 10;
+            while (i <= digit) {
+                factorial *= i++;
+
+            }
+            sum += factorial;
+            temp /= 10;
+        }
+        if (num != sum) {
+
+            System.out.println("not strong");
+            return;
+        }
+        System.out.println("Strong");
+
+    }
+
+    public static void isNeon(int num) {
+        int sq = num * num;
+        int sum = 0;
+        while (sq != 0) {
+            sum += sq % 10;
+            sq /= 10;
+        }
+        if (num == sum) {
+            System.out.println("it is neon");
+            return;
+        }
+        System.out.println("not neon");
+    }
+
+    public static void isPerfect(int num) {
+        int perfect = 0;
+        int temp = num;
+        int i = 1;
+        while (i <= num) {
+            if (num % i == 0) {
+                perfect = perfect + i;
+            }
+            i++;
+        }
+        perfect -= temp;
+        if (temp == perfect) {
+            System.out.print(temp + " is a perfect number");
+            return;
+        }
+        System.out.println("not perfect");
+
+    }
+
+    public static void isPrime(int num) {
+        int i, count;
+        i = 1;
+        count = 0;
+        while (i <= num) {
+            if (num % i == 0) {
+                count++;
+            }
+            i++;
+        }
+        if (count == 2) {
+            System.out.println("This is a prime number");
+            return;
+        }
+        System.out.println("not prime");
+
+    }
+
+}
