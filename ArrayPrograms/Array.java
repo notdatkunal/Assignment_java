@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
+// created a method shifted elements of array by providing index as input
 public class Array {
     public static void main(String[] args) {
         System.out.println("enter length of your array");

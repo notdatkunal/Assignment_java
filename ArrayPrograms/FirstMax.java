@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// first max and second max number in an array
 class FirstMax{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
