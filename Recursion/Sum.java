@@ -1,4 +1,4 @@
-class Test{
+class Sum{
 	static int sum = 0;
 	public static void main(String[] args)
 	{
